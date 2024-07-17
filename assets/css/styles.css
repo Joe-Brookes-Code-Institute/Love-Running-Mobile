@@ -1,50 +1,54 @@
-. {
+@import url('https://fonts.googleapis.com/css?family=tato:wght@300&family-Oswald:wght@200, 300, 400, 500, 600, 700841splay-swap);
+
+{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
 }
 
-
-header {
-    background-color: aquamarine;
-}
-
-main {
-    background-color: rgb(233, 9, 9);
-}
-
-
-
-footer {
-    background-color: rgba(66, 122, 100, 0.8);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-}
-
-
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     font-family: 'Lato', sans-serif;
     text-align: center;
-    color: #333;
+    color: #000000;
     background-image: url('https://codeinstitute.s3.eu-west-1.amazonaws.com/CSSEssentials/love-running-v3/images/webp-optimized/hero-image.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
+
 }
 
-h1, h2, h3 {
+header {
+    background-color: aquamarine;
+}
+
+h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
+
+
+main {
+    background-color: rgb(233, 9, 9);
+    flex: 1 0 auto;
+}
+
+
+footer {
+    background-color: orange;
+}
+
+
+
+
+
 
 h1 {
     font-size: 2.5em;
@@ -123,3 +127,4 @@ background:-color: lightgreen
     / Final rgba value sets the opacity so it is semi-transparent */ background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     background: url("/images/hero-image.webp") no-repeat center center/cover;
+

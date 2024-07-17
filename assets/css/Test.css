@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:wght@300&family=Oswald:wght@200,300,400,500,600,700&display=swap');
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #333;
+    background-image: url('https://codeinstitute.s3.eu-west-1.amazonaws.com/CSSEssentials/love-running-v3/images/webp-optimized/hero-image.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #7fffd4; /* aquamarine */
+}
+
+main {
+    background-color: #e90909; /* rgb(233, 9, 9) */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+footer {
+    background-color: rgba(66, 122, 100, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+<nav> 
+
+.navbar {
+    background-color: rgba(76, 175, 80, 0.8);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(62, 142, 65, 0.8);
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+.content {
+    flex: 1;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("/images/hero-image.webp") no-repeat center center/cover;
+    background-color: rgba(241, 109, 107, 0.7);
+    font-size: 130%;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .navbar a {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
