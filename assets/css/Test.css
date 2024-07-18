@@ -1,61 +1,135 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:wght@300&family=Oswald:wght@200,300,400,500,600,700&display=swap');
-{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    color: #333;
-    background-image: url('https://codeinstitute.s3.eu-west-1.amazonaws.com/CSSEssentials/love-running-v3/images/webp-optimized/hero-image.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
 }
 
 header {
-    background-color: #7fffd4; /* aquamarine */
-}
-
-main {
-    background-color: #e90909; /* rgb(233, 9, 9) */
-    flex: 1 0 auto;
-    margin-top: 47px;
-}
-
-footer {
-    background-color: rgba(66, 122, 100, 0.8);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-h1, {
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
 
-<nav> 
-
-.navbar {
-    background-color: rgba(76, 175, 80, 0.8);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px 0;
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
 }
 
+#menu > li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
+#nav-toggle { 
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+main {
+    background-color: #acdef5;
+    /* push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+/* Footer */
+footer {
+    background-color: orange;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+/* Navbar styles (if needed) */
 .navbar a {
     color: white;
     text-align: center;
@@ -69,45 +143,4 @@ h1, {
     background-color: rgba(62, 142, 65, 0.8);
     color: #FFD700;
     transform: scale(1.05);
-}
-
-.content {
-    flex: 1;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-p {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 20px;
-}
-
-.nav-toggle-label {
-    font-size: 2rem;
-}
-
-/* Hero section */
-#hero {
-    height: 600px;
-    width: 100%;
-    background: url("/images/hero-image.webp") no-repeat center center/cover;
-    background-color: rgba(241, 109, 107, 0.7);
-    font-size: 130%;
-}
-
-@media screen and (min-width: 768px) {
-    h1 {
-        font-size: 3.5em;
-    }
-
-    .navbar a {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 1.5em;
-    }
 }
