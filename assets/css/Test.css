@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     /* Generic project styles */
-    color: #e00202;
+    color: #000000;
     font-family: 'Lato', sans-serif;
 }
 
@@ -23,7 +23,7 @@ h1, h2, h3 {
 
     letter-spacing: 2px;
 
-    color: #252525;
+    color: #000000;
 
 }
 
@@ -32,12 +32,12 @@ h1, h2, h3 {
 /* Header */
 
 header {
-    background-color: #eeeeee;
+    background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
     width: 100%;
-    box-shadow: 0 2px 2px #b32929;
+    box-shadow: 0 2px 2px #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -104,7 +104,7 @@ main {
     position: relative;
 }
     #cover-text {
-    background-color: rgba(206, 115, 72, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -115,7 +115,7 @@ main {
 }
 
 #cover-text > h2, #cover-text > h3 {
-    color: #ffffff;
+    color: #000000;
 }
 
 #reasons {
@@ -129,11 +129,11 @@ main {
     font-size: 280%;
 }
 
-#benefits-physical> div,
-#benefits-mental> div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
-    background-color: rgba(248, 248, 248, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #benefits p {
@@ -177,8 +177,8 @@ list-style-type: none;
 
 #social-networks i {
     font-size: 160%;
-    padding 5%;
-    color: #131010;
+    padding: 5%;
+    color: #000000;
 }
 
 @media screen and (min-width: 768px) {
@@ -208,7 +208,16 @@ list-style-type: none;
         margin: 0 0.5rem;
     }
 
-/* Hero */
+/
+
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+
+    * Hero */
 
     #cover-text {
 
@@ -216,12 +225,26 @@ list-style-type: none;
   right: 50px;
 }
 
-    /* Main content */
-    main {
-        /* Push main content down to accommodate larger header */
-        margin-top: 79px;
-    }
+/* Reasons section */
+#benefits-physical,
+#benefits-mental {
+display: flex;
+flex-direction: column;
+width: 100%;
 }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+    width: 75%;
+}
+
+    #benefits-mental>div {
+    text-align: end;
+    align-self: flex-end;
+}
+
+
+
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -229,6 +252,8 @@ list-style-type: none;
         border-bottom: 1px solid #3a3a3a;
     }
 }
+
+
 
 /* Navbar styles (if needed) */
 .navbar a {
@@ -242,6 +267,6 @@ list-style-type: none;
 
 .navbar a:hover {
     background-color: rgba(62, 142, 65, 0.8);
-    color: #f5f5f5;
+    color: #ffffff;
     transform: scale(1.05);
 }
