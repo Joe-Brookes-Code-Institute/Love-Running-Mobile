@@ -1,30 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=tato:wght@300&family-Oswald:wght@200, 300, 400, 500, 600, 700841splay-swap);
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-{
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
+    /* Generic project styles */
+    color: #3a3a3a;
     font-family: 'Lato', sans-serif;
-    text-align: center;
-    color: #000000;
-    background-image: url('https://codeinstitute.s3.eu-west-1.amazonaws.com/CSSEssentials/love-running-v3/images/webp-optimized/hero-image.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-
 }
 
+/* Header */
 header {
-    background-color: aquamarine;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -34,97 +43,114 @@ h1 {
     color: #252525;
 }
 
-
-main {
-    background-color: rgb(233, 9, 9);
-    flex: 1 0 auto;
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
 }
 
-
-footer {
-    background-color: orange;
+#menu > li {
+    margin-bottom: 1em;
 }
 
-
-
-
-
-
-h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
+.active {
+    border-bottom: 1px solid #3a3a3a;
 }
 
-.navbar {
-    background-color: rgba(76, 175, 80, 0.8);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px 0;
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
 }
 
-.navbar a {
-    color: white;
-    text-align: center;
-    padding: 10px 16px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: all 0.3s ease;
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
 }
 
-.navbar a:hover {
-    background-color: rgba(62, 142, 65, 0.8);
-    color: #FFD700;
-    transform: scale(1.05);
+#nav-toggle {
+    display: none;
 }
 
-.content {
-    flex: 1;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-p {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 20px;
-}
-
-
-@media screen and (min-width: 768px) {
-    h1 {
-        font-size: 3.5em;
-    }
-
-    .navbar a {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 1.5em;
-    }
-}
 .nav-toggle-label {
     font-size: 2rem;
-    }
-   /* Main content "/
-main {
-/* Make main element take up any surplus space to push footer down */
-flex: 1 0 auto;
-margin-top: 47px;
 }
+
+/* Main content */
+main {
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
 /* Hero section */
 #hero {
-height: 600px;
-width: 100%;
-background:-color: lightgreen
-    }
-    background: url("/images/hero-image.webp") no-repeat center center/cover;
-    / Final rgba value sets the opacity so it is semi-transparent */ background-color: rgba(241, 109, 107, ,7);
-    font-size: 130%;
-    background: url("/images/hero-image.webp") no-repeat center center/cover;
+    height: 600px;
+    width: 100%;
+    background-color: #ff9901;
+       
+}
 
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }
+}
