@@ -27,6 +27,9 @@ h1, h2, h3 {
 
 }
 
+.hidden-heading {
+    display: none;
+}
 
 
 /* Header */
@@ -164,7 +167,22 @@ main {
 }
 
 
+#time div {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 15px;
+    /* wrap for screens of less than 400px */
+    flex-basis: 200px;
+    flex-grow: 1;
+     /* background */
+     border: 2px solid white;;
+}
 
+#time h3 {
+    color: #ffffff;
+   
+    }
 
 /* Footer */
 #social-networks {
@@ -223,6 +241,14 @@ list-style-type: none;
 
     width: 300PX;
   right: 50px;
+}
+
+/* time */
+#time {
+    
+    background: url("../images/dublin-city.webp") no-repeat center center/cover;
+    display:flex
+    flex-wrap: wrap;
 }
 
 /* Reasons section */
